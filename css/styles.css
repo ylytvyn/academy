@@ -1,0 +1,178 @@
+:root {
+	--grey: #60606e;
+	--green: #7beec7;
+	--hover: #348e6f;
+	--icons: 'Ionicons';
+	--font: 'Open Sans', sans-serif;
+	--title: 'Montserrat', sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+body {
+	font: 14px/30px var(--font);
+	color: var(--grey);
+	min-width: 360px;
+}
+
+.header {
+	background: url('../images/bg.jpg') no-repeat top center;
+	min-height: 500px;
+	width: 100%;
+	background-size: cover;
+}
+
+.container-fluid {
+	max-width: 1170px;
+}
+
+.logo {
+	font: 700 18px var(--title);
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--grey);
+}
+
+.logo:hover {
+	color: var(--hover);
+}
+
+.menu {
+	padding-top: 35px;
+}
+
+.menu .ion-md-menu {
+	font-size: 30px;
+}
+
+.header__name {
+	font: 700 36px var(--title);
+	text-transform: uppercase;
+}
+
+.breadcrumbs__item {
+	display: inline-block;
+	font: 700 14px var(--title);
+	text-transform: uppercase;
+}
+
+.breadcrumbs__item::after {
+	content: '/';
+	margin-left: 5px;
+}
+
+.breadcrumbs__item:last-child::after {
+	display: none;
+}
+
+.breadcrumbs__link {
+	text-decoration: none;
+	color: var(--grey);
+}
+
+.breadcrumbs__link:hover {
+	color: var(--hover);
+}
+
+.header__title {
+	text-align: center;
+	margin-top: 180px;
+}
+
+.title {
+	font: 700 30px/48px var(--title);
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.title::before {
+	content: '';
+	width: 65px;
+	height: 20px;
+	background: var(--green);
+	position: absolute;
+	left: -4px;
+	bottom: 6px;
+	z-index: -1;
+}
+
+.title-description {
+	font-weight: 800;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.about-us {
+	padding-top: 140px;
+}
+
+@media (max-width: 576px) {
+	.about-us .col-12 {
+		margin-bottom: 30px;
+	}
+}
+
+.benefits {
+	margin-top: 150px;
+}
+
+.benefits-header {
+	text-align: center;
+	margin-bottom: 90px;
+}
+
+.title--small {
+	display: inline-block;
+}
+
+.benefit-block {
+	margin-bottom: 40px;
+}
+
+.benefit-title {
+	font: 700 18px/40px var(--title);
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+
+.benefit-icon {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	background: var(--green);
+	color: #fff;
+	font-size: 30px;
+	line-height: 40px;
+	text-align: center;
+	margin-right: 20px;
+	position: relative;
+	top: 3px;
+}
