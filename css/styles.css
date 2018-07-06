@@ -144,7 +144,7 @@ body {
 	margin-top: 150px;
 }
 
-.benefits-header {
+.header-title {
 	text-align: center;
 	margin-bottom: 90px;
 }
@@ -175,4 +175,139 @@ body {
 	margin-right: 20px;
 	position: relative;
 	top: 3px;
+}
+
+.team__image {
+	margin-bottom: 30px;
+}
+
+.team__image img {
+	width: 100%;
+	filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+	filter: gray; /* IE5+ */
+	-webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+	transition: all .5s ease-in-out;
+	cursor: pointer;
+}
+
+.team__image img:hover {
+	filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+.team {
+	margin-top: 135px;
+}
+
+.footer {
+	background: var(--green);
+	padding: 50px 0;
+}
+
+.join-us__title {
+	font: 700 30px/48px var(--title);
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.btn {
+	padding: 15px 40px;
+	font: 700 14px var(--title);
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.btn--white {
+	background: #fff;
+	color: var(--green);
+}
+
+.btn--white:hover {
+	background: var(--hover);
+	color: #fff;
+}
+
+.btn--green {
+	background: var(--green);
+	color: #fff;
+}
+
+.btn--green:hover {
+	background: var(--hover);
+}
+
+.newsletter {
+	background: #fff;
+	padding: 15px 20px;
+}
+
+.newsletter__title {
+	font: 700 24px/36px var(--title);
+	text-transform: uppercase;
+}
+
+.field {
+	border: 1px solid #e5e5e5;
+	padding: 16px 20px;
+	font: 700 12px var(--title);
+	text-transform: uppercase;
+	color: var(--grey);
+	width: 100%;
+}
+
+.field:focus, .field:not(:placeholder-shown) {
+	border-color: var(--green);
+	padding: 10px 20px 22px;
+}
+
+.label {
+	font: 700 8px var(--title);
+	text-transform: uppercase;
+	color: var(--grey);
+	position: absolute;
+	transition:
+	      background 0.2s,
+	      top 0.2s,
+	      margin-top 0.2s,
+	      opacity 0.2s;
+    padding: 2px 20px;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+::-webkit-input-placeholder {
+  opacity: 1;
+  transition: inherit;
+}
+
+.field:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.field:not(:placeholder-shown) + .label,
+.field:focus + .label {
+  top: 100%;
+  margin-top: -15px;
+  background: var(--green);
+  opacity: 1;
+}
+
+.form {
+	margin-top: 30px;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.form__block {
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
 }
